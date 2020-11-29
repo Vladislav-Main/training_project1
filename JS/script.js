@@ -1,9 +1,22 @@
 // alert('please pay attention');
 // console.log(alert);
 
-const answers = [];
-answers[0] = +prompt('Сколько тебе лет?');
-answers[1] = prompt('Как тебя зовут?');
-answers[2] = prompt('Какая у тебя фамилия?');
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
 
-console.log(answers);
+const personalMovieDB = {
+    count: numberOfFilms,
+    movie: {},
+    actors: {},
+    genres: [],
+    private: false
+};
+
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
+
+personalMovieDB.movie[a] = b;
+personalMovieDB.movie[c] = d;
+
+console.log(personalMovieDB);
